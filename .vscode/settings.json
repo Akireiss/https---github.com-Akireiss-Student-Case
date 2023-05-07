@@ -1,0 +1,6 @@
+{
+    "emmet.preferences": {
+        "javascript": "javascriptreact"
+    },
+    "reactSnippets.settings.typescriptPropsStatePrefix": "type"
+}
