@@ -9,6 +9,7 @@ import { useState, createContext } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { About } from './frontend/About';
 import { Forms } from './frontend/Forms';
+import Main from './frontend/Main';
 
 export const AppContext = createContext();
 
@@ -27,13 +28,14 @@ function App() {
       <AppContext.Provider value={{ username, setUsername }}>
         <QueryClientProvider client={client}>
           <Router>
-            <Navbar />
+            {/* <Navbar /> */}
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/contact' element={<Contact />} />
               <Route path='/profile' element={<Profile />} />
               <Route path='/about' element={<About />} />
               <Route path='/forms' element={<Forms />} />
+              <Route path='/main' element={<Main />} />
               <Route path='*' element={<h1>Page Not Found</h1>} />
             </Routes>
           </Router>

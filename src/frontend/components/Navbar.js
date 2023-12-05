@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Index from './Index';
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -11,40 +10,51 @@ function Navbar() {
 
     return (
         <nav className="">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="flex items-center justify-between h-16">
+
+        <div className="flex items-center">
+            <img src={process.env.PUBLIC_URL + '/img/logo.png'} alt="" className="w-16 " />
+          </div>
+
+          
           <div className="flex items-center">
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
+          
+
+
+
+
                                 <Link
                                     to="/"
                                     className="text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                 >
-                                    Home
+                                    Interpretation
                                 </Link>
                                 <Link
                                     to="/profile"
                                     className="text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                 >
-                                   Profile
+                                    Translation
                                 </Link>
                                 <Link
                                     to="/contact"
                                     className="text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                 >
-                                    Contact
+                                    Other Language Services
                                 </Link>
                                 <Link
                                     to="/about"
                                     className="text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                 >
-                                    About
+                                    Testig And Training
                                 </Link>
                                 <Link
                                     to="/forms"
                                     className="text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                 >
-                                    Forms
+                                    Industries
                                 </Link>
                             </div>
                         </div>
@@ -55,14 +65,14 @@ function Navbar() {
                                 <Link
                                     to="/forms"
                                     className="text-gray-500 px-3 py-2 rounded-md text-sm font-medium"
-                                >
-                                    Login
+                                    >
+                                        About Us
                                 </Link> 
                                 <Link
                                     to="/forms"
                                     className=" bg-[#0f7383] text-white px-3 py-2 rounded-md text-sm font-medium"
                                 >
-                                    Register
+                                    Contact Us
                                 </Link>
                         </div>
 
